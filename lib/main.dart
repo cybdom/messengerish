@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:messengerish/ui/screens/screens.dart';
+import 'package:messengerish/home.dart';
+import 'chat.dart';
 
 void main() => runApp(MyApp());
 
