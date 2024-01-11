@@ -48,12 +48,14 @@ class ReceivedMessagesWidget extends StatelessWidget {
             ],
           ),
           SizedBox(width: 15),
-          Text(
-            "${messages[i]['time']}",
-            style: Theme.of(context)
-                .textTheme
-                .bodyLarge
-                ?.apply(color: Colors.grey),
+          Flexible(
+            child: Text(
+              "${messages[i]['time']}",
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge
+                  ?.apply(color: Colors.grey),
+            ),
           ),
         ],
       ),

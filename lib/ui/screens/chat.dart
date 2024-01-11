@@ -24,22 +24,24 @@ class _ChatScreenState extends State<ChatScreen> {
               imgUrl: friendsList[0]['imgUrl'],
             ),
             SizedBox(width: 15),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "Cybdom Tech",
-                  style: Theme.of(context).textTheme.titleMedium,
-                  overflow: TextOverflow.clip,
-                ),
-                Text(
-                  "Online",
-                  style: Theme.of(context).textTheme.titleSmall?.apply(
-                        color: myGreen,
-                      ),
-                )
-              ],
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "Cybdom Tech",
+                    style: Theme.of(context).textTheme.titleMedium,
+                    overflow: TextOverflow.clip,
+                  ),
+                  Text(
+                    "Online",
+                    style: Theme.of(context).textTheme.titleSmall?.apply(
+                          color: myGreen,
+                        ),
+                  )
+                ],
+              ),
             )
           ],
         ),
