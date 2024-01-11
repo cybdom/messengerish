@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class MyCircleAvatar extends StatelessWidget {
   final String imgUrl;
   const MyCircleAvatar({
-    Key key,
-    @required this.imgUrl,
+    Key? key,
+    required this.imgUrl,
   }) : super(key: key);
 
   @override

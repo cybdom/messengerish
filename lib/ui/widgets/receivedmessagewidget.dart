@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:messengerish/global.dart';
 
 import 'mycircleavatar.dart';
+
 class ReceivedMessagesWidget extends StatelessWidget {
   final int i;
   const ReceivedMessagesWidget({
-    Key key,
-    @required this.i,
+    Key? key,
+    required this.i,
   }) : super(key: key);
 
   @override
@@ -23,7 +24,7 @@ class ReceivedMessagesWidget extends StatelessWidget {
             children: <Widget>[
               Text(
                 "${messages[i]['contactName']}",
-                style: Theme.of(context).textTheme.caption,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               Container(
                 constraints: BoxConstraints(
@@ -39,7 +40,7 @@ class ReceivedMessagesWidget extends StatelessWidget {
                 ),
                 child: Text(
                   "${messages[i]['message']}",
-                  style: Theme.of(context).textTheme.body1.apply(
+                  style: Theme.of(context).textTheme.bodyMedium?.apply(
                         color: Colors.black87,
                       ),
                 ),
@@ -49,7 +50,10 @@ class ReceivedMessagesWidget extends StatelessWidget {
           SizedBox(width: 15),
           Text(
             "${messages[i]['time']}",
-            style: Theme.of(context).textTheme.body2.apply(color: Colors.grey),
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.apply(color: Colors.grey),
           ),
         ],
       ),

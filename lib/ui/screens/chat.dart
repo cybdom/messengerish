@@ -30,12 +30,12 @@ class _ChatScreenState extends State<ChatScreen> {
               children: <Widget>[
                 Text(
                   "Cybdom Tech",
-                  style: Theme.of(context).textTheme.subhead,
+                  style: Theme.of(context).textTheme.titleMedium,
                   overflow: TextOverflow.clip,
                 ),
                 Text(
                   "Online",
-                  style: Theme.of(context).textTheme.subtitle.apply(
+                  style: Theme.of(context).textTheme.titleSmall?.apply(
                         color: myGreen,
                       ),
                 )

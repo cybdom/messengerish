@@ -8,7 +8,6 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.black45),
         iconTheme: IconThemeData(color: Colors.black45),
         title: Text("Messengerish"),
         actions: <Widget>[
@@ -21,6 +20,14 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {},
           ),
         ],
+        toolbarTextStyle: Theme.of(context)
+            .textTheme
+            .apply(bodyColor: Colors.black45)
+            .bodyMedium,
+        titleTextStyle: Theme.of(context)
+            .textTheme
+            .apply(bodyColor: Colors.black45)
+            .titleLarge,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -111,19 +118,19 @@ class HomeScreen extends StatelessWidget {
                 ),
                 title: Text(
                   "${friendsList[i]['username']}",
-                  style: Theme.of(context).textTheme.title,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 subtitle: Text(
                   "${friendsList[i]['lastMsg']}",
                   style: !friendsList[i]['seen']
                       ? Theme.of(context)
                           .textTheme
-                          .subtitle
-                          .apply(color: Colors.black87)
+                          .titleSmall
+                          ?.apply(color: Colors.black87)
                       : Theme.of(context)
                           .textTheme
-                          .subtitle
-                          .apply(color: Colors.black54),
+                          .titleSmall
+                          ?.apply(color: Colors.black54),
                 ),
                 trailing: Container(
                   width: 60,
